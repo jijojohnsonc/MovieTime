@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onMouseClicked="#pageClicked" prefHeight="695.0" prefWidth="384.0" style="-fx-background-color: #08415c;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WelcomeController">
+   <children>
+      <Label layoutX="110.0" layoutY="187.0" onMouseClicked="#pageClicked" prefHeight="160.0" prefWidth="163.0" text="Movie Ticket App" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Fira Sans Regular" size="29.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
