@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,7 +12,10 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -50,6 +54,14 @@ public class LoginController implements Initializable {
                 if (textPassword.getText().equals(rs.getString("Password"))) {
                     labelError.setVisible(false);
                     FXMain.logged_userid = rs.getInt("ID");
+                    Parent root = null;
+                    try {
+                        root = FXMLLoader.load(getClass().getResource("Home.fxml"));
+                    } catch (IOException ex) {
+                        Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    Scene scene = new Scene(root);
+                    FXMain.mainStage.setScene(scene);
                 } else {
                     labelError.setText("Incorrect Password!");
                     labelError.setVisible(true);
@@ -60,7 +72,7 @@ public class LoginController implements Initializable {
                 
             }
         } catch (SQLException ex) {
-            Logger.getLogger(FXMain.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

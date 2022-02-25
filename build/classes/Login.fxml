@@ -15,7 +15,7 @@
             <Font size="29.0" />
          </font>
       </Label>
-      <TextField fx:id="textUsername" layoutX="19.0" layoutY="244.0" prefHeight="55.0" prefWidth="346.0" promptText="Username" style="-fx-background-radius: 8;" />
+      <TextField fx:id="textUsername" layoutX="19.0" layoutY="244.0" prefHeight="55.0" prefWidth="346.0" promptText="Email" style="-fx-background-radius: 8;" />
       <Button fx:id="buttonSubmit" layoutX="104.0" layoutY="417.0" mnemonicParsing="false" onMouseClicked="#buttonSubmitClicked" prefHeight="62.0" prefWidth="176.0" style="-fx-background-color: #6b818c; -fx-background-radius: 7;" text="SUBMIT" textFill="WHITE">
          <font>
             <Font size="18.0" />

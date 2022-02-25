@@ -56,7 +56,7 @@ public class LocationController implements Initializable {
         try {
             root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         } catch (IOException ex) {
-            Logger.getLogger(WelcomeController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(LocationController.class.getName()).log(Level.SEVERE, null, ex);
         }
         Scene scene = new Scene(root);
         FXMain.mainStage.setScene(scene);

@@ -19,12 +19,12 @@ import java.sql.*;
  */
 public class FXMain extends Application {
     
-    public static Connection conn;
-    public static Statement stmt;
-    public static Parent root;
-    public static Stage mainStage;
-    public static int logged_userid = 0;
-    public static String city;
+    protected static Connection conn;
+    protected static Statement stmt;
+    protected static Parent root;
+    protected static Stage mainStage;
+    protected static int logged_userid = 0;
+    protected static String city;
     
     @Override
     public void start(Stage primaryStage) {
@@ -59,7 +59,7 @@ public class FXMain extends Application {
             Logger.getLogger(FXMain.class.getName()).log(Level.SEVERE, null, ex);
         }
         launch(args);
-        System.out.println(city);
+        System.out.println(HomeController.movie);
     }
     
 }
