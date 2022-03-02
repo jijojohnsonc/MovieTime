@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onMouseClicked="#clicked" prefHeight="695.0" prefWidth="384.0" style="-fx-background-color: #eee5e9;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SuccessController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="211.0" onMouseClicked="#clicked" prefHeight="42.0" prefWidth="304.0" text="Booked successfully" textAlignment="CENTER">
+         <font>
+            <Font name="Fira Sans Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="99.0" layoutY="253.0" onMouseClicked="#clicked" prefHeight="86.0" prefWidth="186.0" text="✔">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

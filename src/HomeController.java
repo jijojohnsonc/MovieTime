@@ -15,10 +15,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
 /**
@@ -29,6 +27,8 @@ import javafx.scene.input.MouseEvent;
 public class HomeController implements Initializable {
 
     protected static String movie;
+    protected static int movieID;
+    private ResultSet rs; 
     
     @FXML
     private ListView<String> listMovies;
@@ -42,7 +42,7 @@ public class HomeController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         labelCity.setText(FXMain.city+" >");
         try {
-            ResultSet rs = FXMain.stmt.executeQuery("select Name from MOVIES where ID in (select unique Movie_ID from SHOWS where Theatre_ID in (select ID from THEATRES where city='"+FXMain.city+"'));");
+            rs = FXMain.stmt.executeQuery("select ID, Name from MOVIES where ID in (select unique Movie_ID from SHOWS where Theatre_ID in (select ID from THEATRES where city='"+FXMain.city+"'));");
             while (rs.next()) {
                 listMovies.getItems().add(rs.getString("Name"));
             }
@@ -54,6 +54,14 @@ public class HomeController implements Initializable {
     @FXML
     private void listClicked(MouseEvent event) {
         if (event.getClickCount() == 2) {
+            try {
+                ResultSet rs = FXMain.stmt.executeQuery("select ID from MOVIES where Name='"+listMovies.getSelectionModel().getSelectedItem()+"';");
+                if (rs.next()) {
+                    movieID = rs.getInt("ID");
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
+            }
             movie = listMovies.getSelectionModel().getSelectedItem();
             Parent root = null;
             try {

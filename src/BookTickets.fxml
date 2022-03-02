@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="695.0" prefWidth="384.0" style="-fx-background-color: #08415c;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BookTicketsController">
+   <children>
+      <Label layoutX="29.0" layoutY="32.0" prefHeight="30.0" prefWidth="133.0" style="-fx-text-fill: White; -fx-font-size: 20px;" text="Book Tickets" />
+      <ChoiceBox fx:id="seatsChoiceBox" layoutX="34.0" layoutY="368.0" prefHeight="26.0" prefWidth="242.0" style="-fx-background-color: #ffffff;" />
+      <ChoiceBox fx:id="showChoiceBox" layoutX="32.0" layoutY="294.0" prefHeight="26.0" prefWidth="242.0" style="-fx-background-color: #ffffff;" />
+      <Label layoutX="35.0" layoutY="337.0" prefHeight="22.0" prefWidth="74.0" style="-fx-text-fill: white; -fx-font-size: 15px;" text="Seats" />
+      <Button layoutX="282.0" layoutY="368.0" mnemonicParsing="false" onMouseClicked="#seatsButtonClicked" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #ffffff;" text="Add seat" />
+      <Button layoutX="184.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#buttonProfileClicked" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: #6b818c; -fx-background-radius: 7;" text="Home" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="279.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#buttonProfileClicked" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: #6b818c; -fx-background-radius: 7;" text="Profile" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonSubmit" layoutX="106.0" layoutY="470.0" mnemonicParsing="false" onMouseClicked="#buttonSubmitClicked" prefHeight="53.0" prefWidth="166.0" style="-fx-background-color: #6b818c; -fx-background-radius: 7;" text="SUBMIT" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="dateChoiceBox" layoutX="30.0" layoutY="219.0" prefHeight="26.0" prefWidth="242.0" style="-fx-background-color: #ffffff;" />
+      <ChoiceBox fx:id="theatreChoiceBox" layoutX="30.0" layoutY="144.0" prefHeight="26.0" prefWidth="242.0" style="-fx-background-color: #ffffff;" />
+      <Button layoutX="281.0" layoutY="144.0" mnemonicParsing="false" onMouseClicked="#theatreButtonClicked" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #ffffff;" text="Select" />
+      <Button layoutX="281.0" layoutY="219.0" mnemonicParsing="false" onMouseClicked="#dateButtonClicked" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #ffffff;" text="Select" />
+      <Button layoutX="281.0" layoutY="294.0" mnemonicParsing="false" onMouseClicked="#showButtonClicked" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #ffffff;" text="Select" />
+      <Label layoutX="34.0" layoutY="105.0" prefHeight="17.0" prefWidth="68.0" style="-fx-text-fill: white; -fx-font-size: 15px;" text="Theatre" />
+      <Label layoutX="34.0" layoutY="187.0" prefHeight="17.0" prefWidth="68.0" style="-fx-text-fill: white; -fx-font-size: 15px;" text="Date" />
+      <Label layoutX="34.0" layoutY="263.0" prefHeight="17.0" prefWidth="68.0" style="-fx-text-fill: white; -fx-font-size: 15px;" text="Show" />
+      <Label fx:id="seatsLabel" layoutX="39.0" layoutY="407.0" prefHeight="18.0" prefWidth="148.0" textFill="WHITE" />
+   </children>
+</AnchorPane>

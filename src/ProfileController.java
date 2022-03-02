@@ -49,6 +49,14 @@ public class ProfileController implements Initializable {
 
     @FXML
     private void buttonTicketsClicked(MouseEvent event) {
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("MyTickets.fxml"));
+        } catch (IOException ex) {
+            Logger.getLogger(ProfileController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Scene scene = new Scene(root);
+        FXMain.mainStage.setScene(scene);
     }
 
     @FXML
